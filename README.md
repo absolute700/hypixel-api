@@ -19,7 +19,7 @@ the endpoints included are
 its a 'single' header lib, but sadly it requires a json library and i used (https://github.com/nlohmann/json);
 so import `hypixel.hpp` && `json.hpp` in your project and ba da boom ur done.
 
-includes: download
+includes: [here](https://github.com/absolute700/hypixel-api/releases/download/include/include.zip "here")
 
 # usage
 
