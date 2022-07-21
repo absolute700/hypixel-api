@@ -15,6 +15,8 @@ the endpoints included are
 
 `/punishmentstats`
 
+`/status`
+
 # installation
 its a 'single' header lib, but sadly it requires a json library and i used (https://github.com/nlohmann/json);
 so import `hypixel.hpp` && `json.hpp` in your project and ba da boom ur done.
@@ -88,5 +90,8 @@ printf( "total staff bans: %i\n", punishments.staff_total );
 printf( "total watchdogs bans: %i\n", punishments.watchdog_total );
 ```
 
-
+`/status`
+```c++
+printf( "is online: %s\n", hyp.is_online( "username" ) ? "true" : "false" );
+```
   

@@ -20,6 +20,8 @@ int main( ) {
 	printf( "bedwars level: %i\n", plr.achievements.bedwars_level );
 	printf( "skywars kills: %i\n", plr.stats.skywars.kills );
 
+	printf( "is online: %s\n", hyp.is_online( "username" ) ? "true" : "false" );
+
 	std::vector<hypixel_game> games = hyp.get_games( );
 	for ( auto game : games ) {
 		printf( "name: %s\n", game.name.c_str( ) );

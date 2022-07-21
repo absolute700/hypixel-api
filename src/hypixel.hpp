@@ -3216,7 +3216,21 @@ public:
 
 		return punishments;
 	}
+	auto is_online( std::string data, bool uuid = false ) -> bool {
+		std::string t_uuid = uuid == false ? get_uuid( data ) : data;
+		std::string req = get_hypixel( "status", t_uuid );
 
+		if ( req == "NULL" )
+			return false;
+
+		auto t_json = nlohmann::json::parse( req );
+		try {
+			return t_json[ "session" ][ "online" ];
+		}
+		catch ( ... ) {
+			return false;
+		}
+	}
 private:
 	std::string url = "https://api.hypixel.net";
 	std::string api_key = "";
